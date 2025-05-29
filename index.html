@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site officiel de l'APLFT - Association pour la Promotion des Libertés Fondamentales au Tchad." />
+  <title>APLFT - Accueil</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .organigramme-container {
+      max-width: 1000px;
+      width: 100%;
+      overflow-x: auto;
+      margin: 0 auto;
+    }
+
+    .box {
+      fill: #e5e7eb;
+      stroke: #4b5563;
+      stroke-width: 1.5;
+      rx: 8;
+      ry: 8;
+    }
+
+    .text {
+      font-family: sans-serif;
+      fill: #111827;
+      font-size: 14px;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .arrow {
+      stroke: #4b5563;
+      stroke-width: 1.5;
+      marker-end: url(#arrowhead);
+      @keyframes fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+    }
+  </style>
+<header class="bg-[#4b5563] shadow-md">
+  <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+
+    <!-- Logo à gauche -->
+    <div class="flex items-center">
+      <img src="images/logo.png" alt="Logo de l'APLFT" class="h-16" />
+    </div>
+
+    <!-- Navigation centrée -->
+    <nav class="flex flex-wrap justify-center space-x-6 text-[#3b82f6] font-semibold">
+      <a href="#" class="hover:text-[#1e3a8a] transition-colors duration-300">Accueil</a>
+      <a href="#nous-decouvrir" class="hover:text-[#1e3a8a] transition-colors duration-300">Nous découvrir</a>
+      <a href="#domaines-intervention" class="hover:text-[#1e3a8a] transition-colors duration-300">Domaines d’intervention</a>
+      <a href="#partenaires" class="hover:text-[#1e3a8a] transition-colors duration-300">Partenaires</a>
+      <a href="#contacts" class="hover:text-[#1e3a8a] transition-colors duration-300">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+ <!-- ACCUEIL -->
+<header id="accueil" class="bg-blue-900 text-white py-16 text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <img src="images/logo.png" alt="Logo APLFT" class="mx-auto h-24 mb-4" />
+    <h1 class="text-4xl font-bold">Bienvenue à l'APLFT</h1>
+    <p class="text-lg mt-2 text-blue-100">
+      Association pour la Promotion des Libertés Fondamentales au Tchad
+    </p>
+  </div>
+</header>
+<!-- Nous découvrir + Organigramme réunis -->
+<section id="nous-decouvrir" class="py-16 px-4 text-center bg-gray-100">
+  <div class="max-w-5xl mx-auto space-y-12">
+    <!-- Présentation -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4 text-indigo-700">Nous Découvrir</h2>
+      <p class="text-gray-800 text-lg">
+        L’APLFT, créée en 1991, œuvre pour la promotion et la protection des droits humains au Tchad. Elle intervient dans plusieurs
+        domaines prioritaires d’intérêt public et joue un rôle structurant à travers ses départements techniques.
+      </p>
+    </div>
+
+    <!-- Organigramme -->
+    <div>
+      <h3 class="text-2xl font-bold mb-6 text-blue-900">Organigramme de l'APLFT</h3>
+      <div class="organigramme-container overflow-auto">
+        <svg role="img" aria-label="Organigramme de l'APLFT" width="1000" height="550" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#4B5563" />
+            </marker>
+          </defs>
+
+          <!-- Assemblée Générale -->
+          <rect x="400" y="20" width="200" height="75" class="box"/>
+          <text x="500" y="50" text-anchor="middle" class="text title">Assemblée Générale</text>
+          <text x="500" y="65" text-anchor="middle" class="text">Instance suprême décisionnelle</text>
+
+          <!-- Flèche vers Conseil d'Administration -->
+          <line x1="500" y1="95" x2="500" y2="120" class="arrow"/>
+
+          <!-- Conseil d’Administration -->
+          <rect x="350" y="120" width="300" height="70" class="box"/>
+          <text x="500" y="150" text-anchor="middle" class="text title">Conseil d’Administration</text>
+          <text x="500" y="165" text-anchor="middle" class="text">Supervision stratégique et évaluation</text>
+
+          <!-- Flèche vers Coordination Générale -->
+          <line x1="500" y1="190" x2="500" y2="240" class="arrow"/>
+
+          <!-- Coordination Générale -->
+          <rect x="330" y="240" width="340" height="90" class="box"/>
+          <text x="500" y="270" text-anchor="middle" class="text title">Coordination Générale</text>
+          <text x="500" y="285" text-anchor="middle" class="text">Mise en œuvre des programmes</text>
+          <text x="500" y="300" text-anchor="middle" class="text">et gestion financière</text>
+
+          <!-- Flèches vers Départements Techniques & Niveau Local -->
+          <line x1="500" y1="330" x2="350" y2="390" class="arrow"/>
+          <line x1="500" y1="330" x2="650" y2="390" class="arrow"/>
+
+          <!-- Départements Techniques -->
+          <rect x="200" y="390" width="300" height="90" class="box"/>
+          <text x="350" y="420" text-anchor="middle" class="text title">Départements Techniques</text>
+          <text x="350" y="435" text-anchor="middle" class="text">Genre, Justice, Plaidoyer,</text>
+          <text x="350" y="450" text-anchor="middle" class="text">Communication</text>
+
+          <!-- Niveau Local -->
+          <rect x="500" y="390" width="300" height="90" class="box"/>
+          <text x="650" y="420" text-anchor="middle" class="text title">Niveau Local</text>
+          <text x="650" y="435" text-anchor="middle" class="text">Délégations régionales :</text>
+          <text x="650" y="450" text-anchor="middle" class="text">Clubs et comités de base</text>
+          <text x="650" y="465" text-anchor="middle" class="text">Sensibilisation, reporting local</text>
+        </svg>
+      </div>
+    </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Domaines d’intervention -->
+<section id="domaines-intervention" class="pt-20 pb-12 bg-blue-100 text-center">
+  <h2 class="text-3xl font-bold text-blue-800">Nos Domaines d'Intervention</h2>
+  <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+    Découvrez les domaines clés dans lesquels l'APLFT agit pour défendre les droits humains
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10 px-4">
+    
+    <!-- Domaine 1 -->
+    <div class="bg-white rounded shadow p-4 hover:shadow-md transition">
+      <img src="images/slide2.jpg" alt="Accès aux droits et à la justice" class="w-full h-40 object-cover rounded mb-4">
+      <p class="font-semibold text-blue-800">Accès aux droits et à la justice</p>
+    </div>
+
+    <!-- Domaine 2 -->
+    <div class="bg-white rounded shadow p-4 hover:shadow-md transition">
+      <img src="images/slide1.jpg" alt="Protection et action humanitaire" class="w-full h-40 object-cover rounded mb-4">
+      <p class="font-semibold text-blue-800">Protection et action humanitaire</p>
+    </div>
+
+    <!-- Domaine 3 -->
+    <div class="bg-white rounded shadow p-4 hover:shadow-md transition">
+      <img src="images/slide1.jpg" alt="Genre et promotion des droits humains" class="w-full h-40 object-cover rounded mb-4">
+      <p class="font-semibold text-blue-800">Genre et promotion des droits humains</p>
+    </div>
+
+    <!-- Domaine 4 -->
+    <div class="bg-white rounded shadow p-4 hover:shadow-md transition">
+      <img src="images/slide4.jpg" alt="Gouvernance démocratique et citoyenneté" class="w-full h-40 object-cover rounded mb-4">
+      <p class="font-semibold text-blue-800">Gouvernance démocratique et citoyenneté</p>
+    </div>
+
+    <!-- Domaine 5 -->
+    <div class="bg-white rounded shadow p-4 hover:shadow-md transition">
+      <img src="images/slide3.jpg" alt="Engagement militant et vie associative" class="w-full h-40 object-cover rounded mb-4">
+      <p class="font-semibold text-blue-800">Engagement militant et vie associative</p>
+    </div>
+
+    <!-- Domaine 6 -->
+    <div class="bg-white rounded shadow p-4 hover:shadow-md transition">
+      <img src="images/partenariats.jpg" alt="Synergies, partenariats et plaidoyer" class="w-full h-40 object-cover rounded mb-4">
+      <p class="font-semibold text-blue-800">Synergies, partenariats et plaidoyer</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Actualités -->
+<section id="actualites" class="py-16 bg-gray-100 text-center">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-blue-800 mb-10">Nos Actualités</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+
+      <!-- Actualité 1 -->
+      <div class="bg-white rounded shadow p-4">
+        <img src="images/actu1.jpg" alt="Titre de l’actualité" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-bold text-blue-700 mb-1">Campagne de sensibilisation à Moundou</h3>
+        <p class="text-sm text-gray-600 mb-2">Publié le 28 mai 2025</p>
+        <p class="text-gray-700 mb-2">L’APLFT a organisé une campagne de sensibilisation sur les droits des femmes avec la participation des jeunes leaders communautaires.</p>
+        <video controls class="w-full mt-2 rounded">
+          <source src="videos/actu1.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+
+      <!-- Actualité 2 -->
+      <div class="bg-white rounded shadow p-4">
+        <img src="images/actu2.jpg" alt="Forum jeunes" class="w-full h-40 object-cover rounded mb-3">
+        <h3 class="text-lg font-bold text-blue-700 mb-1">Forum des jeunes pour la paix</h3>
+        <p class="text-sm text-gray-600 mb-2">Publié le 10 mai 2025</p>
+        <p class="text-gray-700">Un forum a réuni plus de 100 jeunes pour discuter du rôle de la jeunesse dans la construction de la paix au Tchad.</p>
+      </div>
+
+      <!-- Actualité 3 (sans image, juste vidéo) -->
+      <div class="bg-white rounded shadow p-4">
+        <h3 class="text-lg font-bold text-blue-700 mb-1">Message de la coordinatrice</h3>
+        <p class="text-sm text-gray-600 mb-2">Publié le 5 avril 2025</p>
+        <p class="text-gray-700 mb-2">La coordinatrice générale s'adresse aux membres et partenaires pour présenter les résultats du trimestre.</p>
+        <video controls class="w-full mt-2 rounded">
+          <source src="videos/message-coordinatrice.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Partenaires -->
+<section id="partenaires" class="py-16 bg-gray-50 border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Nos Partenaires</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <div class="text-blue-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-700">HCR (UNHCR)</h3>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <div class="text-yellow-500 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-700">Union Européenne</h3>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <div class="text-green-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5-6l3 3-3 3" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-700">Société civile tchadienne</h3>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <div class="text-indigo-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h3v10h12V10h3L12 3 3 10z" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-700">Institutions gouvernementales</h3>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <div class="text-red-600 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v4a4 4 0 01-4 4H5l-2 2V5h13a4 4 0 014 4z" />
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-700">Organisations internationales des droits humains</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Signalement -->
+<section id="signalement" class="py-16 bg-white border-t border-gray-200 text-center">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Signaler une violence basée sur le genre</h2>
+    <p class="text-gray-600 mb-6">
+      Si vous ou quelqu'un que vous connaissez êtes victime de violence basée sur le genre, vous pouvez remplir ce formulaire de manière confidentielle.
+    </p>
+    <button id="openModal" class="bg-red-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-red-700 transition">
+      Signaler une violence
+    </button>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-md relative">
+    <button id="closeModal" class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Formulaire de signalement</h3>
+    <form class="space-y-4 text-left">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+        <input type="text" placeholder="Votre nom" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input type="email" placeholder="Votre adresse email" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Description de l’incident</label>
+        <textarea placeholder="Expliquez brièvement ce qui s’est passé" class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition">
+        Envoyer
+      </button>
+    </form>
+  </div>
+</div>
+
+    <!-- Contacts -->
+    <section id="contacts" class="py-12 bg-gray-50 text-center">
+      <div class="max-w-xl mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4">Contacts</h2>
+        <p><strong>Adresse :</strong> Avenue Charles de Gaulle, N'Djamena, Tchad</p>
+        <p><strong>Téléphone :</strong> +235 22 52 34 56</p>
+        <p><strong>Email :</strong> contact@aplft-tchad.org</p>
+       <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1234567890!2d15.054748!3d12.134235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11d8f4c9c2f9bf7b%3A0x9aaf4c9e8a0f22d7!2sN%27Djamena%2C%20Tchad!5e0!3m2!1sfr!2s!4v1234567890" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Carte de localisation APLFT"></iframe>
+    </div>
+  </section>
+
+<section class="bg-blue-50 py-12" id="newsletter">
+  <div class="max-w-3xl mx-auto text-center px-4">
+    <h2 class="text-2xl font-bold text-blue-800 mb-4">Abonnez-vous à notre newsletter</h2>
+    <form id="subscribeForm" class="flex flex-col sm:flex-row justify-center gap-4">
+      <input type="email" id="emailInput" class="p-3 rounded border w-full sm:w-auto flex-1" placeholder="Votre adresse e-mail" required />
+      <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">S’abonner</button>
+    </form>
+    <p id="subscribeMessage" class="mt-4 text-green-600 font-semibold"></p>
+    <p class="mt-2">Nombre d’abonnés : <span id="subscriberCount">...</span></p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('subscribeForm');
+  const emailInput = document.getElementById('emailInput');
+  const message = document.getElementById('subscribeMessage');
+  const countSpan = document.getElementById('subscriberCount');
+
+  const apiUrl = 'TON_URL_GOOGLE_SCRIPT_ICI';
+
+  // Afficher le nombre d'abonnés
+  function fetchSubscriberCount() {
+    fetch(apiUrl)
+      .then(res => res.json())
+      .then(data => {
+        countSpan.textContent = data.count;
+      })
+      .catch(() => {
+        countSpan.textContent = 'N/A';
+      });
+  }
+  fetchSubscriberCount();
+
+  // Gestion du formulaire
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if(!email) return;
+    message.textContent = 'Envoi en cours...';
+    fetch(apiUrl + '?email=' + encodeURIComponent(email), {
+      method: 'POST'
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.status === 'success') {
+        message.textContent = "Merci pour votre abonnement !";
+        emailInput.value = '';
+        fetchSubscriberCount();
+      } else if(data.status === 'exists') {
+        message.textContent = "Vous êtes déjà abonné.";
+      } else {
+        message.textContent = "Erreur lors de l'abonnement.";
+      }
+    })
+    .catch(() => {
+      message.textContent = "Erreur réseau.";
+    });
+  });
+</script>
+
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center p-6 mt-12">
+    <p>© 2025 APLFT - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+    const modal = document.getElementById("modal");
+    if (openModal && closeModal && modal) {
+      openModal.onclick = () => modal.classList.remove("hidden");
+      closeModal.onclick = () => modal.classList.add("hidden");
+      window.onclick = e => { if (e.target == modal) modal.classList.add("hidden"); };
+      modal.classList.remove("hidden");
+modal.classList.add("animate-fade-in");
+
+    }
+  </script>
+</body>
+
+</html>
+
